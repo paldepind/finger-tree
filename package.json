@@ -1,0 +1,42 @@
+{
+  "name": "@paldepind/finger-tree",
+  "version": "0.0.1",
+  "description": "Highly optimized implementation of finger trees.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -P tsconfig-build.json",
+    "test": "nyc mocha  --timeout 5000 --recursive test/**/*.ts",
+    "test-watch": "mocha -R progress --timeout 5000 --watch --compilers ts:ts-node/register test/**/*.ts"
+  },
+  "author": "Simon Friis Vindum",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "4.0.4",
+    "@types/mocha": "2.2.43",
+    "@types/ramda": "^0.24.11",
+    "chai": "^4.1.2",
+    "codecov": "2.3.0",
+    "mocha": "3.5.3",
+    "np": "^2.16.0",
+    "nyc": "11.2.1",
+    "ramda": "^0.24.1",
+    "source-map-support": "^0.4.18",
+    "ts-node": "3.3.0",
+    "typescript": "^2.5.2"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register",
+      "source-map-support/register"
+    ],
+    "reporter": [
+      "json",
+      "html",
+      "text",
+      "lcov"
+    ]
+  }
+}
