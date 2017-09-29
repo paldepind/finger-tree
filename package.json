@@ -2,11 +2,12 @@
   "name": "@paldepind/finger-tree",
   "version": "0.0.1",
   "description": "Highly optimized implementation of finger trees.",
-  "main": "index.js",
+  "main": "dist/finger.js",
   "scripts": {
     "build": "tsc -P tsconfig-build.json",
     "test": "nyc mocha  --timeout 5000 --recursive test/**/*.ts",
-    "test-watch": "mocha -R progress --timeout 5000 --watch --compilers ts:ts-node/register test/**/*.ts"
+    "test-watch": "mocha -R progress --timeout 5000 --watch --compilers ts:ts-node/register test/**/*.ts",
+    "prepublishOnly": "npm run build"
   },
   "author": "Simon Friis Vindum",
   "license": "MIT",
